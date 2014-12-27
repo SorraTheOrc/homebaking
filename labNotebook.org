@@ -43,6 +43,14 @@ Email: ross@gardler.org
 Password: Usual 3G one in simple form
 
 * DONE Create a basic admin interface for the log database
+* TODO Create a user view with a single button that logs a message in the debug log whenever it is pressed
+
+This is the first view that should be tested on the Pi itself.
+
+** DONE created a hello world view
+** TODO Add the button
+** TODO add an action to the button
+
 * TODO Turn Great Room lights on
 
 ** TODO Find a suitable Python library for the Phillips Hue

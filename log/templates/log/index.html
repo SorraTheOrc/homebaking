@@ -1,0 +1,7 @@
+{% if button_list %}
+  {% for button in button_list %}
+    <button type="button">{{ button.event_type }}</button>
+  {% endfor %}
+{% else %}
+  <p>No Buttons Defined for the UI</p>
+{% endif %}
