@@ -25,8 +25,14 @@ python manage.py runserver 0.0.0.0:8000
 
 * Using
 
-* TODO
+* TODO Create a log database file
 
-** TODO Turn Great Room lights on
+The application should log all activity in the application to a database file
 
-*** TODO Find a suitable Python library for the Phillips Hue
+python manage.py startapp log
+
+python manage.py makemigrations log
+
+* TODO Turn Great Room lights on
+
+** TODO Find a suitable Python library for the Phillips Hue
