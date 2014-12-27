@@ -25,7 +25,7 @@ python manage.py runserver 0.0.0.0:8000
 
 * Using
 
-* TODO Create a log database file
+* DONE Create a log database file
 
 The application should log all activity in the application to a database file
 
@@ -33,6 +33,16 @@ python manage.py startapp log
 
 python manage.py makemigrations log
 
+python manage.py migrate
+
+* DONE Create an admin user
+
+python manage.py createsuperuser
+Username: admin
+Email: ross@gardler.org
+Password: Usual 3G one in simple form
+
+* DONE Create a basic admin interface for the log database
 * TODO Turn Great Room lights on
 
 ** TODO Find a suitable Python library for the Phillips Hue
