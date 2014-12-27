@@ -1,0 +1,32 @@
+HomeBaking is a home automation management application.
+
+* Installation
+
+Python v2.7.3 or later
+
+** Django
+
+sudo pip install django
+sudo pip install pytz
+
+** Configure the application
+
+In homebaking/settings.py set TIME_ZONE to your preferred timezone
+(e.g. "America/Los_Angeles")
+
+python manage.py migrate
+
+* Running
+
+At present we only run in development mode. This is not secure and
+should not be used in a production home (i.e. exposed outside the home network)
+
+python manage.py runserver 0.0.0.0:8000
+
+* Using
+
+* TODO
+
+** TODO Turn Great Room lights on
+
+*** TODO Find a suitable Python library for the Phillips Hue
