@@ -25,7 +25,9 @@ python manage.py runserver 0.0.0.0:8000
 
 * Using
 
-* DONE Create a log database file
+* Development Log
+** Iteration 1
+** DONE Create a log database file
 
 The application should log all activity in the application to a database file
 
@@ -35,22 +37,41 @@ python manage.py makemigrations log
 
 python manage.py migrate
 
-* DONE Create an admin user
+** DONE Create an admin user
 
 python manage.py createsuperuser
 Username: admin
 Email: ross@gardler.org
 Password: Usual 3G one in simple form
 
-* DONE Create a basic admin interface for the log database
-* TODO Create a user view with a single button that logs a message in the debug log whenever it is pressed
+** DONE Create a basic admin interface for the log database
+** TODO Create a user view with a single button that logs a message in the debug log whenever it is pressed
 
 This is the first view that should be tested on the Pi itself.
 
-** DONE created a hello world view
-** TODO Add the button
-** TODO add an action to the button
+*** DONE created a hello world view
+*** DONE Add the button
 
-* TODO Turn Great Room lights on
+A button will automatically be created for each of the entries in the
+Log table.
+
+[master e47e868] Add a button for each of the entries in the Log table
+ 5 files changed, 30 insertions(+), 2 deletions(-)
+ create mode 100644 log/templates/log/index.html
+ create mode 100644 log/urls.py
+
+*** DONE add a log action to the button
+
+When the button is clicked the appropriate action is logged in the Log
+table and reported on the status line.
+
+** TODO Add a feature to turn Great Room lights on
 
 ** TODO Find a suitable Python library for the Phillips Hue
+
+** Iteration 2
+** TODO Make the button functionality pluggable
+At present the buttons are generated from the entries in the Log table
+and functionality is hard coded into the Log application. We should
+make this pluggable so that we can drop in a new "feature" and it will
+appear in the interface.

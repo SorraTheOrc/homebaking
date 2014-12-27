@@ -1,7 +1,11 @@
 {% if button_list %}
   {% for button in button_list %}
-    <button type="button">{{ button.event_type }}</button>
+    <button type="button" onclick="document.location.href='/action/{{ button.event_type }}'">{{ button.event_type }}</button>
   {% endfor %}
 {% else %}
   <p>No Buttons Defined for the UI</p>
+{% endif %}
+
+{% if status %}
+  <p class='status'>{{ status }}</p>
 {% endif %}
