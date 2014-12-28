@@ -100,7 +100,7 @@ Office is Group 1
 
 *** TODO Log actions taken by the Hue app
 When actions are performed on lights we should log that actin.
-*** TODO Add a feature to turn Great Room lights on
+*** DONE Add a feature to turn Great Room lights on
 ** Iteration 2
 *** TODO Make the button functionality pluggable
 At present the buttons are generated from the entries in the Log table
