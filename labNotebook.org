@@ -70,11 +70,17 @@ table and reported on the status line.
  5 files changed, 49 insertions(+), 11 
 
 *** TODO Add a feature to turn Great Room lights on
+**** DONE Create a connection
 
-**** TODO Create a connection
+[master 799b4b2] Connect to the Hue Bridge
+ 6 files changed, 84 insertions(+), 14 deletions(-)
+ create mode 100644 homebaking/templates/homebaking/hue_connect.html
+ create mode 100644 homebaking/templates/homebaking/index.html
+ create mode 100644 homebaking/views.py
+
+**** TODO Add a button to turn on the Office lights
 
 
-**** TODO Add a button to turn on the Great lights
 
 **** DONE find a python library for Phillips Hue
 
@@ -93,4 +99,8 @@ appear in the interface.
 *** TODO Refactor Hue bridge logic
 
 Hue logic for connecting to the Bridge is in homebacking/views.py is
-sould be in a controller class.
+sould be in a controller class in the hue app.
+
+We also have two bridge connections one in homebaking.views and one in hue.views
+
+*** TODO Hue app is tightly coupled to homebaking app via hue.views.takeAction
