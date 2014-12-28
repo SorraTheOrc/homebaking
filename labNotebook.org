@@ -98,19 +98,30 @@ Office is Group 1
  create mode 100644 hue/urls.py
  create mode 100644 hue/views.py
 
-*** TODO Log actions taken by the Hue app
-When actions are performed on lights we should log that actin.
+*** DONE Log actions taken by the Hue app
+When actions are performed on lights we should log that action.
+
+
+
+
 *** DONE Add a feature to turn Great Room lights on
 ** Iteration 2
+*** TODO Make the buttons pretty
 *** TODO Make the button functionality pluggable
 At present the buttons are generated from the entries in the Log table
 and functionality is hard coded into the Log application. We should
 make this pluggable so that we can drop in a new "feature" and it will
 appear in the interface.
+*** TODO Add a description field to the Log tables
+The data field will contain the raw data (e.g. JSON for hue) while the
+description field will be human readable.
 *** TODO Make buttons respond to current status
 At present the buttons are do not reflect the current status of the
 lights. Make then change depending on current status. i.e. when the
 lights are on offer an off option and vice-versa.
+
+**** TODO provide a way for new apps to insert items into the Log table
+For example, the Hue app should create a Log table called 'Hue'.
 
 ** Iteration 3
 *** TODO Refactor Hue bridge logic

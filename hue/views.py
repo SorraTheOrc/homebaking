@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from beautifulhue.api import Bridge
+from datetime import datetime
+import json
+from log.models import Log, Event
 
 username = 'homebakingrgardler'
 bridge = Bridge(device={'ip':'192.168.1.5'}, user={'name': username})
@@ -26,9 +29,17 @@ def takeAction(request, group_id, action_id):
                 }
             }
     else:
-        return render(request, 'homebaking/index.html', {'status': 'Unkown group action requested: ' + action_id})
+        description = 'Unkown group action requested: ' + action_id
+        log(description)
+        return render(request, 'homebaking/index.html', {'status': description})
 
     bridge.group.update(resource)
-    return render(request, 'homebaking/index.html', {'status': 'Group action taken'})
+    description = 'Group ' + group_id + ' turned ' + action_id
+    log(description, resource)
+    return render(request, 'homebaking/index.html', {'status': description})
 
+def log(description, resource = {}):
+    log = get_object_or_404(Log, event_type='Hue')
+    event = Event(log = log, time = datetime.now(), data = description + ' using ' + json.dumps(resource))
+    event.save()
 
