@@ -69,7 +69,13 @@ table and reported on the status line.
 [master 8eb96d4] Record an action in the log
  5 files changed, 49 insertions(+), 11 
 
-*** TODO Add a feature to turn Great Room lights on
+*** DONE Add a feature to turn Office Room lights on
+**** DONE find a python library for Philips Hue
+
+Will use https://github.com/allanbunch/beautifulhue
+
+See experiments/pyhue (aborted) and experiments/beautifulhue
+
 **** DONE Create a connection
 
 [master 799b4b2] Connect to the Hue Bridge
@@ -78,22 +84,33 @@ table and reported on the status line.
  create mode 100644 homebaking/templates/homebaking/index.html
  create mode 100644 homebaking/views.py
 
-**** TODO Add a button to turn on the Office lights
+**** DONE Add a button to turn on the Office lights
+     
+Office is Group 1
 
+[master 4f8fe08] Add a button to turn on office lights
+ 9 files changed, 56 insertions(+), 3 deletions(-)
+ create mode 100644 hue/__init__.py
+ create mode 100644 hue/admin.py
+ create mode 100644 hue/migrations/__init__.py
+ create mode 100644 hue/models.py
+ create mode 100644 hue/tests.py
+ create mode 100644 hue/urls.py
+ create mode 100644 hue/views.py
 
-
-**** DONE find a python library for Phillips Hue
-
-Will use https://github.com/allanbunch/beautifulhue
-
-See experiments/pyhue (aborted) and experiments/beautifulhue
-
+*** TODO Log actions taken by the Hue app
+When actions are performed on lights we should log that actin.
+*** TODO Add a feature to turn Great Room lights on
 ** Iteration 2
 *** TODO Make the button functionality pluggable
 At present the buttons are generated from the entries in the Log table
 and functionality is hard coded into the Log application. We should
 make this pluggable so that we can drop in a new "feature" and it will
 appear in the interface.
+*** TODO Make buttons respond to current status
+At present the buttons are do not reflect the current status of the
+lights. Make then change depending on current status. i.e. when the
+lights are on offer an off option and vice-versa.
 
 ** Iteration 3
 *** TODO Refactor Hue bridge logic
