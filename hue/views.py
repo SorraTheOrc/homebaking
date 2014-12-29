@@ -31,12 +31,12 @@ def takeAction(request, group_id, action_id):
     else:
         description = 'Unkown group action requested: ' + action_id
         log(description)
-        return render(request, 'homebaking/index.html', {'status': description})
+        return render(request, 'hue/actionFailed.html', {'status': description})
 
     bridge.group.update(resource)
     description = 'Group ' + group_id + ' turned ' + action_id
     log(description, resource)
-    return render(request, 'homebaking/index.html', {'status': description})
+    return render(request, 'hue/actionSucceeded.html', {'status': description})
 
 def log(description, resource = {}):
     log = get_object_or_404(Log, event_type='Hue')

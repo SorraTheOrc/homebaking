@@ -101,12 +101,16 @@ Office is Group 1
 *** DONE Log actions taken by the Hue app
 When actions are performed on lights we should log that action.
 
-
-
+[master 556876c] Log hue actions
+ 2 files changed, 27 insertions(+), 5 deletions(-)
 
 *** DONE Add a feature to turn Great Room lights on
-** Iteration 2
+*** DONE When we take a Hue action show a result page then redirect to the index page
 *** TODO Make the buttons pretty
+Saved working directory and index state WIP on master: 556876c Log hue actions
+HEAD is now at 556876c Log hue actions
+*** TODO Make available on GitHub
+** Iteration 2
 *** TODO Make the button functionality pluggable
 At present the buttons are generated from the entries in the Log table
 and functionality is hard coded into the Log application. We should
