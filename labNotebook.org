@@ -106,9 +106,8 @@ When actions are performed on lights we should log that action.
 
 *** DONE Add a feature to turn Great Room lights on
 *** DONE When we take a Hue action show a result page then redirect to the index page
-*** TODO Make the buttons pretty
-Saved working directory and index state WIP on master: 556876c Log hue actions
-HEAD is now at 556876c Log hue actions
+*** DONE Make the buttons easier to hit
+
 *** TODO Make available on GitHub
 ** Iteration 2
 *** TODO Make the button functionality pluggable
