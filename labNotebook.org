@@ -4,7 +4,8 @@ HomeBaking is a home automation management application.
 
 Python v2.7.3 or later
 
-** Django and Dependencies
+** Dependencies
+*** Django and Related Dependencies
 
 sudo pip install django
 sudo pip install pytz
@@ -27,7 +28,7 @@ python manage.py runserver 0.0.0.0:8000
 * Using
 
 * Development Log
-** Iteration 1
+** DONE Iteration 1
 *** DONE Create a log database file
 
 The application should log all activity in the application to a database file
@@ -107,9 +108,20 @@ When actions are performed on lights we should log that action.
 *** DONE Add a feature to turn Great Room lights on
 *** DONE When we take a Hue action show a result page then redirect to the index page
 *** DONE Make the buttons easier to hit
+[master a13e93c] Add CSS for buttons
+ 3 files changed, 9 insertions(+), 3 deletions(-)
+ create mode 100644 homebaking/static/style/default.css
+*** DONE use JQuery in templates
+*** DONE Make available on GitHub
+Counting objects: 118, done.
+Compressing objects: 100% (103/103), done.
+Writing objects: 100% (118/118), 15.59 KiB, done.
+Total 118 (delta 43), reused 0 (delta 0)
+To git@github.com:rgardler/homebaking.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
 
-*** TODO Make available on GitHub
-** Iteration 2
+** TODO Iteration 2
 *** TODO Make the button functionality pluggable
 At present the buttons are generated from the entries in the Log table
 and functionality is hard coded into the Log application. We should
@@ -126,7 +138,7 @@ lights are on offer an off option and vice-versa.
 **** TODO provide a way for new apps to insert items into the Log table
 For example, the Hue app should create a Log table called 'Hue'.
 
-** Iteration 3
+** TODO Iteration 3
 *** TODO Refactor Hue bridge logic
 
 Hue logic for connecting to the Bridge is in homebacking/views.py is
